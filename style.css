@@ -1,0 +1,105 @@
+/* Styling Dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 40px 60px; /* Padding lebih luas di sisi */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header dan Foto */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Membuat foto menjadi lingkaran */
+    object-fit: cover; /* Memastikan foto terlihat baik */
+    margin-bottom: 10px;
+    border: 3px solid #333; /* Tambahkan bingkai sederhana */
+}
+
+.header h1 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin: 5px 0 0 0;
+}
+
+.title-cv {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Divider/Garis Pemisah */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+/* Bagian (Sections) */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db; /* Garis bawah biru */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Data Pribadi Table */
+.data-pribadi table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-pribadi td {
+    padding: 4px 0;
+    vertical-align: top;
+    font-size: 0.95em;
+}
+
+.data-pribadi .label {
+    width: 150px; /* Lebar kolom label yang konsisten */
+    font-weight: bold;
+    color: #555;
+}
+
+/* Daftar (Pendidikan & Organisasi) */
+.list-item {
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+.list-item li {
+    margin-bottom: 15px;
+}
+
+.list-item li b {
+    color: #333;
+    font-size: 1.05em;
+}
+
+.list-item li i {
+    color: #7f8c8d;
+    display: block; /* Membuat program studi di baris baru */
+    margin-bottom: 5px;
+}

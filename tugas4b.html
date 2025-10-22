@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Profil - Praktikum 4</title>
+    <!-- Memuat Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Mengatur font default dan elemen Iframe responsif */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Rasio aspek 16:9 (untuk video) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Tag HTML5: HEADER -->
+    <header class="bg-blue-600 shadow-lg p-5">
+        <div class="max-w-7xl mx-auto text-white">
+            <h1 class="text-3xl font-bold">Profil Diri Lengkap</h1>
+            <!-- Tag HTML5: NAV (Navigasi Internal) -->
+            <nav class="mt-2 space-x-4">
+                <a href="#biodata" class="hover:text-blue-200 transition duration-300">Biodata</a>
+                <a href="#multimedia" class="hover:text-blue-200 transition duration-300">Multimedia</a>
+                <a href="#download" class="hover:text-blue-200 transition duration-300">File Penting</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Struktur Utama: MAIN dan ASIDE (menggunakan flex untuk layout 2 kolom) -->
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 p-5 lg:p-10 flex-grow">
+        
+        <!-- Tag HTML5: MAIN (Konten Utama: Deskripsi, Multimedia) -->
+        <main class="lg:w-3/4 space-y-8">
+            
+            <!-- Tag HTML5: SECTION - Deskripsi Diri -->
+            <section id="deskripsi" class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-2xl font-semibold text-blue-800 mb-4">Deskripsi Diri</h2>
+                
+                <!-- Tag HTML5: ARTICLE (Deskripsi lengkap dan singkat) -->
+                <article class="space-y-4">
+                    <!-- Paragraph 1 (Deskripsi Lengkap) -->
+                    <p class="text-gray-700">
+                        Saya adalah seorang mahasiswa teknik informatika semester pertama yang memiliki minat besar terhadap pengembangan web dan kecerdasan buatan. Sejak awal perkuliahan, saya aktif mempelajari *frontend development* (HTML5, CSS, JavaScript, React) dan juga memiliki dasar yang kuat dalam bahasa pemrograman Python. Saya selalu mencari proyek baru untuk mengasah kemampuan teknis dan kolaborasi tim.
+                    </p>
+                    <!-- Paragraph 2 (Deskripsi Singkat) -->
+                    <p class="text-gray-700 font-medium">
+                        Secara singkat, saya adalah pembelajar cepat, berorientasi pada detail, dan mampu bekerja secara mandiri maupun dalam tim kolaboratif untuk menghasilkan solusi teknologi yang efektif dan efisien.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Tag HTML5: SECTION - Konten Multimedia (Video dan Koleksi Foto) -->
+            <section id="multimedia" class="space-y-6">
+                <h2 class="text-2xl font-semibold text-blue-800 mb-4">Konten Multimedia</h2>
+
+                <!-- Video (Menggunakan IFRAME) -->
+                <article class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Video Presentasi Proyek</h3>
+                    <p class="text-sm text-gray-600 mb-4">Video di bawah ini disematkan menggunakan tag `&lt;iframe&gt;` (Contoh tautan video YouTube).</p>
+                    
+                    <div class="iframe-container">
+                        <!-- IFRAME untuk menyematkan video eksternal (Placeholder YouTube Embed) -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/9uxqWImw6L4" 
+                        title="Video Presentasi Proyek"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+
+                    </div>
+                </article>
+
+                <!-- Koleksi Foto -->
+                <article class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Koleksi Foto Kegiatan</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <!-- Placeholder Foto 1 -->
+                        <img src="py.png" alt="Foto Proyek 1" class="rounded-lg object-cover w-full h-32 shadow-sm">
+                        <!-- Placeholder Foto 2 -->
+                        <img src="ss.jpg" alt="Foto Seminar" class="rounded-lg object-cover w-full h-32 shadow-sm">
+                        <!-- Placeholder Foto 3 -->
+                       <img src="ss2.png" alt="Foto Pelatihan" class="rounded-lg object-cover w-full h-32 shadow-sm hidden sm:block">
+                    </div>
+                </article>
+            </section>
+
+            <!-- Tag HTML5: SECTION - Link Download File -->
+            <section id="download" class="bg-white p-6 rounded-xl shadow-md text-center">
+                <h3 class="text-xl font-semibold mb-3">Dokumen Penting (CV/Portofolio)</h3>
+                <p class="text-gray-600 mb-4">Unduh Curriculum Vitae (CV) atau dokumen pendukung lainnya di sini.</p>
+                <a href="#" download="CV_NamaAnda.pdf" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                    ⬇️ Unduh File CV (PDF)
+                </a>
+            </section>
+        </main>
+
+        <!-- Tag HTML5: ASIDE (Kolom Samping: Foto dan Biodata) -->
+        <aside id="biodata" class="lg:w-1/4 bg-blue-50 p-6 rounded-xl shadow-lg h-fit">
+            
+            <!-- Foto Diri (f) -->
+            <div class="mb-6 text-center">
+                <img 
+                    src="foto.jpg" 
+                    alt="Foto Diri" 
+                    class="rounded-full mx-auto border-4 border-blue-600 shadow-xl"
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x200/cccccc/333333?text=Error';"
+                >
+                <h3 class="text-xl font-bold mt-4 text-blue-900">Refaldi Rahman</h3>
+                <p class="text-sm text-gray-500">0110225167</p>
+            </div>
+            
+            <!-- Biodata Lengkap (g) -->
+            <h4 class="text-lg font-semibold mb-3 border-b pb-1 border-blue-200 text-blue-700">Biodata Lengkap</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+                <li><strong>TTL:</strong> Jakarta, 31 Oktober 2006</li>
+                <li><strong>Prodi/Rombel:</strong> Teknik Informatika / TI05</li>
+                <li><strong>Email:</strong> refaldirahman@nurulfikri.ac.id</li>
+                <li><strong>Telepon:</strong> +62 821 1304 2721</li>
+                <li><strong>Alamat:</strong> Jl.Limusnunggal Cileungsi</li>
+                <li><strong>Keahlian:</strong> HTML, CSS,canva</li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Tag HTML5: FOOTER -->
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="max-w-7xl mx-auto text-center text-sm">
+            <p>Praktikum Pemrograman Web E - Layout & IFRAME | &copy; 2025</p>
+        </div>
+    </footer>
+
+</body>
+</html>
